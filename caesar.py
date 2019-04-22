@@ -7,7 +7,7 @@ else:
     print("You must enter a key")
     sys.exit(1)
 
-p = input("Please insert plaintext")
+p = input("Please insert plaintext: ")
 
 print("ciphertext: ", end="")
 
@@ -20,8 +20,8 @@ for i in range(len(p)):
             print(f"{cencrypt}", end="")
         elif p[i].islower():
             letter = ord(p[i]) - 97
-            encrpt = ((letter + key) % 26) + 97
-            cencrypt = chr(encrypt)
+            new_letter = ((letter + key) % 26) + 97
+            cencrypt = chr(new_letter)
             print(f"{cencrypt}", end="")
         else:
             print(f"{p[i]}", end="")
